@@ -5,7 +5,20 @@ module Commands
     end
 
     def run pizza:
-      @repo.create!(pizza)
+      @pizza = pizza
+      truncate_name
+      persist
+    end
+
+    private
+
+    def truncate_name
+      return unless @pizza[:name]
+      @pizza[:name] = @pizza[:name][0..24]
+    end
+
+    def persist
+      @repo.create!(@pizza)
     end
   end
 end
