@@ -13,7 +13,7 @@ module Commands
     private
 
     def truncate_name
-      return unless @pizza[:name]
+      return unless @topping[:name]
       @topping[:name] = @topping[:name][0..24]
     end
 

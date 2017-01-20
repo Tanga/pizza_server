@@ -14,7 +14,7 @@ module Commands
 
     def truncate_name
       return unless @pizza[:name]
-      @pizza[:name] = @pizza[:name][0..24]
+      @pizza[:name] = @pizza[:name][0..49]
     end
 
     def persist

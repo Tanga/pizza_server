@@ -10,7 +10,7 @@ module Commands
 
     describe '#run' do
       it 'should truncate the name' do
-        expect(subject.name.length).to eq(25)
+        expect(subject.name.length).to eq(50)
       end
     end
   end
